@@ -24,8 +24,8 @@
                 <div class="d-flex align-items-center justify-content-center flex-column gap-3"
                     style="height: 100vh; max-width: 500px;">
                     <div class="d-flex align-items-center gap-2 mb-5 d-sm-flex d-md-none">
-                        <img src="/src/static/img/icon.png" alt="Icono de la web" alt="" class="rounded mx-auto" width="50"
-                            height="50">
+                        <img src="/src/static/img/icon.png" alt="Icono de la web" alt="" class="rounded mx-auto"
+                            width="50" height="50">
 
                         <h1 class="fw-bold m-0" style="font-size: 2rem;">Gym<span class="t-blue">Schedule</span></h1>
                     </div>
@@ -35,7 +35,7 @@
                             class="text-decoration-none t-blue m-0 fs-7">create a new account</a>
                     </div>
 
-                    <form action="" class="w-100 px-4" id="login-form">
+                    <form class="w-100 px-4 needs-validation" novalidate id="login-form">
                         <div class="mb-3 w-100">
                             <label for="user" class="form-label fs-7">
                                 Email address
@@ -50,13 +50,17 @@
                                             fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
                                     </svg>
                                 </span>
-                                <input type="text" class="form-control form-control border-0 ps-0"
-                                    placeholder="mail@mail.com" aria-label="Username" aria-describedby="mail-icon" id="user-mail">
+                                <input type="text" class="form-control form-control border-0 ps-0 has-validation"
+                                    placeholder="mail@mail.com" aria-label="Username" aria-describedby="mail-icon"
+                                    id="user" required>
+                                <div class="invalid-tooltip">
+                                    Please enter the mail.
+                                </div>
                             </div>
                         </div>
                         <div class="mb-3 w-100">
                             <label for="password" class="form-label fs-7">Password</label>
-                            <div class="input-group mb-3 shadow-sm">
+                            <div class="input-group mb-3 shadow-sm has-validation">
                                 <span class="input-group-text bg-white border-0 text-muted" id="password-icon">
                                     <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -66,8 +70,13 @@
                                     </svg>
                                 </span>
                                 <input type="password" class="form-control border-0 ps-0" placeholder="·····"
-                                    aria-label="Username" aria-describedby="password-icon" id="password" id="user-password">
+                                    aria-label="Username" aria-describedby="password-icon" id="password" id="password"
+                                    required>
+                                <div class="invalid-tooltip">
+                                    Please enter the password.
+                                </div>
                             </div>
+
                         </div>
                         <div class="mb-3 form-check d-flex w-100">
                             <a href="reset-password.html"
